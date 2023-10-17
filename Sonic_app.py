@@ -784,7 +784,7 @@ with tab4:
 
 
 # Display the image in Streamlit
-    img_wyllie = Image.open(r"C:\Users\Malasique\Documents\GitHub\Sonic-Log-Interpreter-Web-Application\Sonic_Formula.png")
+    img_wyllie = Image.open("Sonic_Formula.png")
     img_wyllie = img_wyllie.resize([int(img_wyllie.width/3), int(img_wyllie.height/3.5)])
     st.image(img_wyllie, caption= 'Figure 1. Wyllie time average equation')
     
