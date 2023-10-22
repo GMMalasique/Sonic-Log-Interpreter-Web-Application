@@ -185,7 +185,7 @@ with tab3:
                 las_df = las_file.df()
     
     if mode == 'Use sample LAS file':
-        file = r"Sample_las.LAS"
+        file = r"Sample.las"
         las_file = lasio.read(file)
         las_df = las_file.df()
           
