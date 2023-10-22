@@ -2,7 +2,7 @@ blinker==1.6.2
 fpdf==1.7.2
 lascheck==0.1.4
 lasio==0.31
-matplotlib==3.7.2
+matplotlib==3.5.3
 missingno==0.5.2
 numpy==1.24.3
 pandas==2.0.3
