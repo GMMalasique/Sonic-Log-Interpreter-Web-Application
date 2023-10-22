@@ -4,7 +4,7 @@ lascheck==0.1.4
 lasio==0.31
 matplotlib==3.5.3
 missingno==0.5.2
-numpy==1.24.3
+numpy==1.21.6
 pandas==2.0.3
 Pillow==10.1.0
 plotly==5.9.0
