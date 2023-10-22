@@ -10,7 +10,6 @@ import lascheck
 import traceback
 from PIL import Image
 
-st.set_option('browser.gatherUsageStats', False)
     
 # Function to set interval transit values in μsec/m
 def unit_meter():
