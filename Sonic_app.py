@@ -10,7 +10,7 @@ import lascheck
 import traceback
 from PIL import Image
 
-    
+@st.cache_data 
 # Function to set interval transit values in μsec/m
 def unit_meter():
     global dt_matrix_sandstone
@@ -28,7 +28,8 @@ def unit_meter():
     dt_fluid_freshwater = 204 * 12 * 2.54 * 0.01
     correction_oil = 0.9
     correction_gas = 0.7
-
+    
+@st.cache_data 
 # Function to set interval transit values in μsec/ft
 def unit_feet():
     global dt_matrix_sandstone
@@ -708,6 +709,7 @@ with tab3:
             plt.close(fig3)
             pdf_pages.close()
             
+            
             st.markdown('**Download Result:**')
             with open(pdf_filename, "rb") as pdf_file:
                 st.download_button("Download", pdf_file.read(), key="pdf_button", mime="application/pdf")
@@ -720,14 +722,16 @@ with tab3:
             have_anomaly = False
             need_correction = False
             no_error = False
-        
+            
+            @st.cache
             def result_calibration():
                 st.markdown('''**Negative porosity value. Porosity should range between 0 to 1.**
                             \nPossible reason:
                             \nWrong matrix used.
                             \nCycle Skipping
                                 ''')
-        
+            
+            @st.cache
             def result_anomaly():
                 st.markdown('''**More than 1 porosity value. Reading anomalies detected.**
                             \nPossible reason:
@@ -735,7 +739,8 @@ with tab3:
                             \nBorehole condition problem occurance. The holes might be larger than about 24 in. for common rocks.
                             \nThe borehole is air-filled or if the mud is gas-cut
                             ''')
-        
+                            
+            @st.cache
             def result_correction():
                 st.markdown('''**Overestimate porosity value. Correction should be applied.**
                             \nPossible reason:
@@ -743,7 +748,8 @@ with tab3:
                             \nHydrocarbon present
                             \nComplex lithology
                             ''')
-        
+                            
+            @st.cache
             def result_good():
                 st.markdown('''**Normal sonic porosity reading.**''')
         
